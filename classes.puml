@@ -1,0 +1,16 @@
+@startuml Class
+
+class Cargo <<abstract>>
+class Administrativo extends Cargo
+class Coordenador extends Cargo
+class Professor extends Cargo
+
+interface Escolaridade <<interface>>
+class Doutorado implements Escolaridade
+class EnsinoMedio implements Escolaridade
+class Graduacao implements Escolaridade
+class Mestrado implements Escolaridade
+
+Cargo --> "1" Escolaridade : Bridge
+
+@enduml
